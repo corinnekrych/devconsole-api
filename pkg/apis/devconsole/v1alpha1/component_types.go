@@ -20,7 +20,10 @@ type ComponentSpec struct {
 // ComponentStatus defines the observed state of Component.
 // +k8s:openapi-gen=true
 type ComponentStatus struct {
+	// RevNumber indicates if the component has been updated.
+	// It is linked to the ObjectMeta.ResourceVersion of the component.
 	RevNumber string `json:"revNumber,omitempty"`
+	// Phase indicates which phase the component build and deployment process is.
 	Phase     string `json:"phase,omitempty"`
 }
 
