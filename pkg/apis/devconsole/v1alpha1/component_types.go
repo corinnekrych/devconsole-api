@@ -4,10 +4,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// ComponentSpec defines the desired state of Component
+// ComponentSpec defines the desired state of Component.
 // +k8s:openapi-gen=true
 type ComponentSpec struct {
-	// Container image use to build (nodejs, golang etc..)
+	// BuildType is the container image used to build (nodejs, golang etc..).
 	BuildType string `json:"buildType"`
 	// GitSourceRef is the source code of your component. Currently, only public remote URLs are supported.
 	GitSourceRef string `json:"gitSourceRef"`
@@ -17,7 +17,7 @@ type ComponentSpec struct {
 	Exposed bool `json:"exposed,omitempty"`
 }
 
-// ComponentStatus defines the observed state of Component
+// ComponentStatus defines the observed state of Component.
 // +k8s:openapi-gen=true
 type ComponentStatus struct {
 	RevNumber string `json:"revNumber,omitempty"`
@@ -25,15 +25,15 @@ type ComponentStatus struct {
 }
 
 const (
-	// PhaseDeploying indicate component is under deployment
+	// PhaseDeploying indicate component is under deployment.
 	PhaseDeploying string = "Deploying"
-	// PhaseDeployed indicate component is deployed
+	// PhaseDeployed indicate component is deployed.
 	PhaseDeployed string = "Deployed"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// Component is the Schema for the components API
+// Component is the Schema for the components API.
 // +k8s:openapi-gen=true
 type Component struct {
 	metav1.TypeMeta   `json:",inline"`
@@ -50,7 +50,7 @@ func (c *Component) GetName() string {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// ComponentList contains a list of Component
+// ComponentList contains a list of Component.
 type ComponentList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
