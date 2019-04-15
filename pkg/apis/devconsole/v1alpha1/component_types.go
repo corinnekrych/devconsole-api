@@ -28,9 +28,11 @@ type ComponentStatus struct {
 }
 
 const (
-	// PhaseDeploying indicate component is under deployment.
+	// PhaseBuilding indicates the component is under build.
+	PhaseBuilding string = "Building"
+	// PhaseDeploying indicates the component is under deployment.
 	PhaseDeploying string = "Deploying"
-	// PhaseDeployed indicate component is deployed.
+	// PhaseDeployed indicates the component is deployed.
 	PhaseDeployed string = "Deployed"
 )
 
