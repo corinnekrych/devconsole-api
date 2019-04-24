@@ -117,7 +117,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:dd11a4a34c68c84042603069933b8c40cd1bf07f7e40d050d4dc3cf60ea6fb63"
+  digest = "1:368c063ff749ce9640ae6b8b7ce31b863f351b3ce24687ddd78d3c005b9fe248"
   name = "golang.org/x/net"
   packages = [
     "http/httpguts",
@@ -126,16 +126,18 @@
     "idna",
   ]
   pruneopts = ""
-  revision = "afe8014c977f78fe2406743d9d32c8bd44d0542b"
+  revision = "4829fb13d2c62012c17688fa7f629f371014946d"
 
 [[projects]]
-  digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
+  digest = "1:bac96bbcaaf8f81c72a1dd59aceaf7cb0b16b64ff0c45c32af78dc9218651e07"
   name = "golang.org/x/text"
   packages = [
     "collate",
     "collate/build",
     "internal/colltab",
     "internal/gen",
+    "internal/language",
+    "internal/language/compact",
     "internal/tag",
     "internal/triegen",
     "internal/ucd",
@@ -149,8 +151,8 @@
     "width",
   ]
   pruneopts = ""
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
+  revision = "c942b20a5d85b458c4dce1589326051d85e25d6d"
+  version = "v0.3.1"
 
 [[projects]]
   digest = "1:75fb3fcfc73a8c723efde7777b40e8e8ff9babf30d8c56160d01beffea8a95a6"
@@ -170,7 +172,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:d2752bacce20a9d9f39465ab91489021fb7069fda1c5263fde2cf4c646aa9aea"
+  digest = "1:cee84b5a97331f71872b7d6a745982b9565af71719d4b6f5ebe7b331a8d58666"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/resource",
@@ -196,7 +198,7 @@
     "third_party/forked/golang/reflect",
   ]
   pruneopts = ""
-  revision = "11f1676e3da49fcc37a6bc42f77a77ce972a931f"
+  revision = "f1e86e15343c4bebb6eac63ed39907c686813ae7"
 
 [[projects]]
   digest = "1:4b78eccecdf36f29cacc19ca79411f2235e0387af52b11f1d77328d7ad5d84a2"
@@ -217,7 +219,7 @@
 [[projects]]
   digest = "1:25e7ed13dcd8b81f6a1fafb326d3b60c8298823036417c2bef0a38d4183fd01e"
   name = "sigs.k8s.io/controller-runtime"
-  packages = ["pkg/runtime/scheme"]
+  packages = ["pkg/scheme"]
   pruneopts = ""
   revision = "4276f3895df0acc9249f817eb86a47a3db6b7a9e"
   version = "v0.2.0-alpha.0"
@@ -231,7 +233,7 @@
     "k8s.io/apimachinery/pkg/runtime",
     "k8s.io/apimachinery/pkg/runtime/schema",
     "k8s.io/kube-openapi/pkg/common",
-    "sigs.k8s.io/controller-runtime/pkg/runtime/scheme",
+    "sigs.k8s.io/controller-runtime/pkg/scheme",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

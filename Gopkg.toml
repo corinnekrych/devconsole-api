@@ -13,7 +13,7 @@
 
 [[override]]
   name = "k8s.io/client-go"
-  branch = "master"
+  version = "kubernetes-1.13.4"
 
 [[override]]
   name = "sigs.k8s.io/controller-runtime"
